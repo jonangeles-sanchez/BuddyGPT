@@ -3,14 +3,16 @@ import sys
 import click
 
 
+
 @click.command()
-def main(args=None):
+@click.option("-m", "--msg", prompt="Your message to ChatGPT", help="Your message to ChatGPT")
+@click.argument("files", nargs=-1, type=click.Path(exists=True), required=0)
+def ask_chatGPT(msg, files):
     """Console script for buddygpt."""
-    click.echo("Replace this message by putting your code into "
-               "buddygpt.cli.main")
-    click.echo("See click documentation at https://click.palletsprojects.com/")
+    click.echo(f"Your message to ChatGPT is: {msg}")
+    click.echo(f"Files are: {files}")
     return 0
 
 
 if __name__ == "__main__":
-    sys.exit(main())  # pragma: no cover
+    sys.exit(ask_chatGPT())  # pragma: no cover
