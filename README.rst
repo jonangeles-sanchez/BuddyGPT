@@ -29,8 +29,16 @@ Meet your new CLI buddy to answer questions and help you solve your coding probl
 
 Features
 --------
+Meet your new CLI buddy to answer questions and help you solve your coding problems!
 
-* TODO
+
+Features include:
+
+* Command line ChatGPT
+* Ask ChatGPT general or coding questions
+* Append unlimited files to more specific questions (as long as they meet below ChatGPT's word count)
+
+For installation, usage, and more click on the buttons above this file or go to the docs directory in this project.
 
 Credits
 -------
