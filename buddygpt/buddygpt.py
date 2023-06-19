@@ -31,4 +31,4 @@ def structure_message(msg, files):
     return {"role" : "assistant", "content" : msg + "\n" + "\n".join([file["name"] + "\n" + file["content"] for file in file_contents])}
 
 def print_message(completion):
-    print(completion.choices[0].message.content
+    print(completion.choices[0].message.content)
