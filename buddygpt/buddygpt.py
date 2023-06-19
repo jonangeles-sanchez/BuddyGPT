@@ -9,7 +9,7 @@ def messenger(msg,files):
     return 0
 
 def connect_to_chatGPT(msg, files):
-    openai.api_key = "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"
+    openai.api_key = "sk-"
     completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[structure_message(msg, files)])
     print_message(completion)
 
