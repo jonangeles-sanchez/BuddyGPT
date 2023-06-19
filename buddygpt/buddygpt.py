@@ -25,3 +25,10 @@ def extract_file_content(files):
         with open(file, "r") as f:
             file_contents.append({"name" : file, "content" : f.read()})
     return file_contents
+
+def structure_message(msg, files):
+    file_contents = extract_file_content(files)
+    return {"role" : "assistant", "content" : msg + "\n" + "\n".join([file["name"] + "\n" + file["content"] for file in file_contents])}
+
+def print_message(completion):
+    print(completion.choices[0].message.content
