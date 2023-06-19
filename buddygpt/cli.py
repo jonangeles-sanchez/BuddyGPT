@@ -1,6 +1,7 @@
 """Console script for buddygpt."""
 import sys
 import click
+from buddygpt.buddygpt import messenger 
 
 
 
@@ -9,10 +10,7 @@ import click
 @click.argument("files", nargs=-1, type=click.Path(exists=True), required=0)
 def ask_chatGPT(msg, files):
     """Console script for buddygpt."""
-    click.echo(f"Your message to ChatGPT is: {msg}")
-    click.echo(f"Files are: {files}")
-    return 0
-
+    messenger(msg, files)
 
 if __name__ == "__main__":
     sys.exit(ask_chatGPT())  # pragma: no cover
